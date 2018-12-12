@@ -1,0 +1,19 @@
+{
+  "name": "mathlibrary",
+  "version": "1.0.0",
+  "description": "math library with Mocha test",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gala1234/mathLibrary.git"
+  },
+  "author": "Galadriel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gala1234/mathLibrary/issues"
+  },
+  "homepage": "https://github.com/gala1234/mathLibrary#readme"
+}
