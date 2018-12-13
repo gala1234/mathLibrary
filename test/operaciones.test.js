@@ -1,4 +1,4 @@
-
+const math = require('mathjs');
 const assert = require('assert');
 const op = require ('../lib/operaciones');
 
@@ -25,40 +25,24 @@ describe('Properties to validate', () => {
         b = 0;
     });
 
-    it('Test common multiple', () => {
-        let res = op.add(a, b);
-
-        assert.ok(res > 0);
-        assert.equal(res, a+b);
-    });
-    it('Test resta', () => {
-        let res = op.sub(a, b);
-
-        assert.equal(res, a-b);
-    });
-    it('Test div by zero', () => {
-        try {
-            op.div(a, 0);
-
-            assert.ok(false);
-        } catch(e) {
-            assert.ok(true);
-        }
-    });
     it('Test Common Multiple', () => {
         let res = op.commonMultiple(a, b);
-        try {
-            res;
 
-            assert.ok(false);
-        } catch(e) {
-            assert.ok(true);
-        }
-        assert.ok(res > 0);
-        assert.equal(res, a+b);
+        assert.ok(res/a% 1 == 0);
+        assert.ok(res/b% 1 == 0);
+        assert.equal( res, (a*b)/op.greatestCommonDivisor(a,b));
+    });
+
+    it('Test Greatest Common Divisor', () => {
+        let res = op.greatestCommonDivisor(a, b);
+
+        assert.ok(a/res% 1 == 0);
+        assert.ok(b/res% 1 == 0);
+    });
+
+    it('Test Prime Number', () => {
+        let res = op.primeNumber(a);
+        
+        assert.equal( res, math.isPrime(a));
     });
 })
-
-after(() => {
-    console.log('after');
-});

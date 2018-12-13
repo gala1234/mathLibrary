@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/gala1234/mathLibrary#readme",
   "dependencies": {
+    "mathjs": "^5.4.0",
     "mocha": "^5.2.0"
   }
 }
