@@ -1,2 +1,3 @@
 # mathLibrary
-math library with Mocha test
+math library with Mocha's test
+
