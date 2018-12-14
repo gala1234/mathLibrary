@@ -45,4 +45,16 @@ describe('Properties to validate', () => {
         
         assert.equal( res, math.isPrime(a));
     });
+
+    it('Test Coprime Number', () => {
+        let res = op.coprimeNumbers(a, b);
+        
+        assert.equal( res, math.gcd(a, b)===1);
+    });
+
+    it('Test Scuare Root', () => {
+        let res = op.scuareRoot(a);
+        
+        assert.equal( Math.trunc(res*1000), Math.trunc(Math.sqrt(a)*1000));
+    });
 })
